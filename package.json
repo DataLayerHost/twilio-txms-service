@@ -1,0 +1,36 @@
+{
+  "name": "txms-service",
+  "version": "1.0.0",
+  "description": "Twilio TXMS service.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "twilio-run start",
+    "new": "twilio-run new",
+    "deploy": "twilio-run deploy --override-existing-project",
+    "promote": "twilio-run promote --from=dev --to=stage",
+    "logs": "twilio-run logs --tail",
+    "ui-active": "twilio api:serverless:v1:services:update --ui-editable"
+  },
+  "dependencies": {
+    "@twilio/runtime-handler": "1.2.5",
+    "axios": "^1.1.3",
+    "twilio": "^3.56",
+    "txms.js": "^1.0.0"
+  },
+  "devDependencies": {
+    "twilio-run": "^3.4.5"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "author": "DataLayer",
+  "license": {
+    "type": "CORE",
+    "url": "https://github.com/cryptohub-digital/core-license/blob/master/LICENSE"
+  },
+  "repository": "https://github.com/cryptohub-digital/twilio-txms-service",
+  "homepage": "https://github.com/cryptohub-digital/twilio-txms-service#readme",
+  "bugs": {
+    "url": "https://github.com/cryptohub-digital/twilio-txms-service/issues"
+  }
+}
