@@ -1,16 +1,14 @@
-# TXMS Twilio service
+# TxMS Twilio Service
 
-You can deploy this function to create your own TXMS service on Twilio.
+Deploy this function to establish your own TxMS service via Twilio.
 
 ## Installation
 
-Node.js 14 is expected
+Ensure you have Node.js 14 installed.
 
-### Creation of environment variables
+### Setting Up Environment Variables
 
-To start development version create `.env` file in the root of the project.
-
-Contents of `.env` file:
+For the development version, create a `.env` file in the project's root directory. The `.env` file should contain the following:
 
 ```sh
 ACCOUNT_SID=…
@@ -21,56 +19,56 @@ ENDPOINT=…
 ```
 
 Where:
-- ACCOUNT_SID: Twilio account SID
-- AUTH_TOKEN: Twilio account token
-- DEBUG: Debugging of the program - 1/true / 0/false
-- PROVIDER: Url of the provider used (Currently [Blockbook](https://github.com/cryptohub-digital/blockbook) supported.)
-- ENDPOINT: Endpoint for streaming the Core Transactions
+- ACCOUNT_SID: Your Twilio account SID
+- AUTH_TOKEN: Your Twilio account token
+- DEBUG: Program debugging setting - 1/true or 0/false
+- PROVIDER: URL of the provider in use (Currently, [Blockbook](https://github.com/trezor/blockbook) is supported.)
+- ENDPOINT: Endpoint for streaming Core Transactions
 
-### Installation of dependencies
+### Dependency Installation
 
-To install the dependencies, run the command:
+Install the necessary dependencies by running the command:
 
 `npm i`
 
 ## Development
 
-To run the development version, run command:
+To launch the development version, run the following command:
 
 `npm run start`
 
 ## Deployment
 
-### Development version
+### Development Version
 
-To deploy your project on the server, make sure you have correct rights and then run:
+To deploy your project on a server, ensure you have the necessary permissions, then execute:
 
 `npm run deploy -- -n=name --environment=dev`
 
-Replace/delete name and environment if needed.
+Alter or remove the name and environment as necessary.
 
-### Production version
+### Production Version
 
 `npm run deploy -- -n=name && npm run promote -- -n=name`
 
-Replace/delete name if needed.
+Alter or remove the name as necessary.
 
 ### Logs
 
-Gather latest logs continuously.
+To continuously collect the latest logs, run:
 
 `npm run logs`
 
-### UI Editable
+### UI Editability
 
-Make the deployment editable in the UI.
+To make the deployment editable in the UI, use:
 
 `npm run ui-active -- --sid ZS…`
 
-## Epigram
+## Motto
 
 > 「Cryptoni Confidimus」
 
 ## License
 
-Licensed under the [CORE License](LICENSE).
+This service is licensed under the [CORE License](LICENSE).
